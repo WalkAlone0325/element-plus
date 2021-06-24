@@ -147,7 +147,10 @@ export default defineComponent({
 
     return () => (
       <div ref={root} class="el-affix" style={rootStyle.value}>
-        <div class="{'el-affix--fixed': state.fixed}" style={affixStyle.value}>
+        <div
+          class={{ 'el-affix--fixed': state.fixed }}
+          style={affixStyle.value}
+        >
           {slots?.default()}
         </div>
       </div>
